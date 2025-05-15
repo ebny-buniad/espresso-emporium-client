@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import Home from "../pages/Home";
 import Root from "../root/Root";
+import AddedCoffee from "../pages/AddedCoffee";
 
 const router = createBrowserRouter([
     {
@@ -10,6 +11,10 @@ const router = createBrowserRouter([
             {
                 index: true,
                 Component: Home
+            },
+            {
+                path:'added-coffee',
+                Component: AddedCoffee
             }
         ]
     }

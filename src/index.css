@@ -28,3 +28,8 @@ body{
 .bg-primary{
     background-color: #e3b476;
 }
+
+.products-container{
+    background-image: url('../src/assets/images/more/1.png');
+    background-repeat: no-repeat;
+}
