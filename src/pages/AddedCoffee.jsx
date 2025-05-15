@@ -4,6 +4,29 @@ import { Link } from 'react-router';
 
 
 const AddedCoffee = () => {
+
+    const handelAddCoffee = e => {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form)
+        const addCoffeeData = Object.fromEntries(formData);
+        console.log(addCoffeeData)
+
+
+        fetch('http://localhost:3000/coffees', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addCoffeeData)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+
+
+    }
+
+
     return (
         <div className='max-w-4xl w-full bg-white p-10 rounded-md shadow-md mx-auto mt-10'>
             <Link to='/' className='flex items-center gap-2 font-rancho'> <IoMdArrowBack />Back to home</Link>
@@ -15,10 +38,11 @@ const AddedCoffee = () => {
                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.
                 </p>
 
-                <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <form onSubmit={handelAddCoffee} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label className="block mb-2 font-semibold">Name</label>
                         <input
+                            name='name'
                             type="text"
                             placeholder="Enter coffee name"
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
@@ -28,6 +52,7 @@ const AddedCoffee = () => {
                     <div>
                         <label className="block mb-2 font-semibold">Chef</label>
                         <input
+                            name='chef'
                             type="text"
                             placeholder="Enter coffee chef"
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
@@ -37,6 +62,7 @@ const AddedCoffee = () => {
                     <div>
                         <label className="block mb-2 font-semibold">Supplier</label>
                         <input
+                            name='supplier'
                             type="text"
                             placeholder="Enter coffee supplier"
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
@@ -44,10 +70,11 @@ const AddedCoffee = () => {
                     </div>
 
                     <div>
-                        <label className="block mb-2 font-semibold">Taste</label>
+                        <label className="block mb-2 font-semibold">Price</label>
                         <input
+                            name='price'
                             type="text"
-                            placeholder="Enter coffee taste"
+                            placeholder="Enter coffee price"
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
                         />
                     </div>
@@ -55,6 +82,7 @@ const AddedCoffee = () => {
                     <div>
                         <label className="block mb-2 font-semibold">Category</label>
                         <input
+                            name='category'
                             type="text"
                             placeholder="Enter coffee category"
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
@@ -64,6 +92,7 @@ const AddedCoffee = () => {
                     <div>
                         <label className="block mb-2 font-semibold">Details</label>
                         <input
+                            name='details'
                             type="text"
                             placeholder="Enter coffee details"
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
@@ -73,6 +102,7 @@ const AddedCoffee = () => {
                     <div className="md:col-span-2">
                         <label className="block mb-2 font-semibold">Photo</label>
                         <input
+                            name='photo'
                             type="text"
                             placeholder="Enter photo URL"
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none"

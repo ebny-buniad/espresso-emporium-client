@@ -4,32 +4,46 @@
 @plugin "daisyui";
 
 
-.font-rancho{
+.font-rancho {
     font-family: "Rancho", cursive;
 }
 
-body{
+body {
     font-family: "Raleway", sans-serif;
     scroll-behavior: smooth;
 }
 
-.nav-bg{
+.nav-bg {
     background-image: url('../src/assets/images/more/15.jpg');
     background-position: top center;
 }
 
-.hero-bg{
+.hero-bg {
     background-image: url('../src/assets/images/more/3.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 
-.bg-primary{
+.bg-primary {
     background-color: #e3b476;
 }
 
-.products-container{
+.products-container {
     background-image: url('../src/assets/images/more/1.png');
     background-repeat: no-repeat;
+}
+
+.bg-glass {
+    /* From https://css.glass */
+background: rgba(229, 229, 229, 0.04);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.7px);
+-webkit-backdrop-filter: blur(2.7px);
+border: 1px solid rgba(229, 229, 229, 0.82);
+}
+
+.footer-bg{
+    background-image: url('./assets/images/more/13.jpg');
 }

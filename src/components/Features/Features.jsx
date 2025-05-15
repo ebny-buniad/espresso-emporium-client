@@ -7,7 +7,7 @@ import icon4 from '../../assets/images/icons/4.png'
 const Features = () => {
     return (
         <div className='bg-[#edebe4]'>
-            <div className='w-9/12 mx-auto py-10 grid md:grid-cols-4 gap-5'>
+            <div className='w-9/12 mx-auto py-10 grid md:grid-cols-2 lg:grid-cols-4 gap-5'>
                 <div className='space-y-3'>
                     <img className='w-10' src={icon1} alt="" />
                     <h4 className='font-rancho text-3xl'>Awesome Aroma</h4>
