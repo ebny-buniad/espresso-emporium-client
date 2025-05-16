@@ -11,7 +11,7 @@ const CoffeeCard = ({ coffee }) => {
     return (
         <div>
             <div className='border flex items-center justify-around bg-glass p-3'>
-                <img className='w-30 lg:w-60' src={photo} alt="" />
+                <img className='w-30 lg:w-60' src={photo} alt="photo" />
                 <div className='space-y-3 lg:space-y-5'>
                     <p><span className='font-bold'>Name:</span> {name}</p>
                     <p><span className='font-bold'>Chef:</span> {chef}</p>
@@ -19,7 +19,7 @@ const CoffeeCard = ({ coffee }) => {
                 </div>
                 <div className='flex flex-col lg:gap-5 gap-2'>
                     <Link to={`/coffee-details/${_id}`} className='btn'><FaRegEye /></Link>
-                    <button className='btn'><BsPen /></button>
+                    <Link to={`/update-details/${_id}`} className='btn'><BsPen /></Link>
                     <button className='btn'><AiOutlineDelete /></button>
                 </div>
             </div>
