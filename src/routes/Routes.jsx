@@ -4,6 +4,8 @@ import Root from "../root/Root";
 import AddedCoffee from "../pages/AddedCoffee";
 import DetailsCoffee from "../components/DetailsCoffee/DetailsCoffee";
 import UpdateDetails from "../components/UpdateDetails/UpdateDetails";
+import { Component } from "react";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
@@ -20,14 +22,18 @@ const router = createBrowserRouter([
                 Component: AddedCoffee
             },
             {
-                path:'/coffee-details/:id',
+                path: '/coffee-details/:id',
                 Component: DetailsCoffee,
-                loader: ({params}) => fetch(`http://localhost:3000/coffees/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:3000/coffees/${params.id}`)
             },
             {
                 path: '/update-details/:id',
                 Component: UpdateDetails,
-                loader: ({params}) => fetch(`http://localhost:3000/coffees/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:3000/coffees/${params.id}`)
+            },
+            {
+                path: '*',
+                Component: ErrorPage
             }
         ]
     }
