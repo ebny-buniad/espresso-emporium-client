@@ -32,6 +32,7 @@ const AddedCoffee = () => {
                         timer: 3000
                     });
                 }
+                e.target.reset();
             })
 
 
@@ -49,7 +50,7 @@ const AddedCoffee = () => {
                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.
                 </p>
 
-                 <form onSubmit={handelAddCoffee} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <form onSubmit={handelAddCoffee} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label className="block mb-2 font-semibold">Name</label>
                         <input
@@ -57,6 +58,7 @@ const AddedCoffee = () => {
                             type="text"
                             placeholder="Enter coffee name"
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+                            required
                         />
                     </div>
 
@@ -67,6 +69,7 @@ const AddedCoffee = () => {
                             type="text"
                             placeholder="Enter coffee chef"
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+                            required
                         />
                     </div>
 
@@ -77,6 +80,7 @@ const AddedCoffee = () => {
                             type="text"
                             placeholder="Enter coffee supplier"
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+                            required
                         />
                     </div>
 
@@ -87,6 +91,7 @@ const AddedCoffee = () => {
                             type="text"
                             placeholder="Enter coffee price"
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+                            required
                         />
                     </div>
 
@@ -97,6 +102,7 @@ const AddedCoffee = () => {
                             type="text"
                             placeholder="Enter coffee category"
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+                            required
                         />
                     </div>
 
@@ -107,6 +113,7 @@ const AddedCoffee = () => {
                             type="text"
                             placeholder="Enter coffee details"
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+                            required
                         />
                     </div>
 
@@ -117,6 +124,7 @@ const AddedCoffee = () => {
                             type="text"
                             placeholder="Enter photo URL"
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+                            required
                         />
                     </div>
 

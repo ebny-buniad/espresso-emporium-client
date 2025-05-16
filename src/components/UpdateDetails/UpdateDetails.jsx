@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link, useLoaderData } from 'react-router';
+import { Link, Navigate, useLoaderData, useNavigate } from 'react-router';
 import { IoMdArrowBack } from "react-icons/io";
 import Swal from 'sweetalert2';
 
 
 const UpdateDetails = () => {
+    const navigate = useNavigate();
+
     const existingData = useLoaderData()
     const { name, chef, supplier, price, category, details, photo, _id } = existingData;
 
@@ -24,6 +26,7 @@ const UpdateDetails = () => {
         })
             .then(res => res.json())
             .then(data => {
+
                 if (data.modifiedCount === 1) {
                     Swal.fire({
                         position: "center-center",
@@ -32,6 +35,11 @@ const UpdateDetails = () => {
                         showConfirmButton: false,
                         timer: 3000
                     });
+
+                    setTimeout(() => {
+                        navigate('/')
+                    }, 3000)
+
                 } else {
                     Swal.fire({
                         position: "center-center",
