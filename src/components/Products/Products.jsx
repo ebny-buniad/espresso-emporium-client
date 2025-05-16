@@ -22,7 +22,8 @@ const Products = ({ coffeesPromise }) => {
 
             <div className='lg:w-9/12 mx-auto grid md:grid-cols-2 lg:gap-5 gap-2 p-1'>
                 {
-                    coffees.map(coffee => <CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>)
+                    coffees.map(coffee => <CoffeeCard key={coffee._id}
+                        coffee={coffee} coffees={coffees} setCoffees={setCoffees}></CoffeeCard>)
                 }
             </div>
         </div>
