@@ -2,6 +2,7 @@ import React from 'react';
 import { AiOutlineDelete } from "react-icons/ai";
 import { FaRegEye } from "react-icons/fa";
 import { BsPen } from "react-icons/bs";
+import { Link } from 'react-router';
 
 const CoffeeCard = ({ coffee }) => {
 
@@ -17,7 +18,7 @@ const CoffeeCard = ({ coffee }) => {
                     <p><span className='font-bold'>Price:</span> {price}</p>
                 </div>
                 <div className='flex flex-col lg:gap-5 gap-2'>
-                    <button className='btn'><FaRegEye /></button>
+                    <Link to={`/coffee-details/${_id}`} className='btn'><FaRegEye /></Link>
                     <button className='btn'><BsPen /></button>
                     <button className='btn'><AiOutlineDelete /></button>
                 </div>
