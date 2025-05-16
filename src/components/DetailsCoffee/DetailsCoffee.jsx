@@ -4,7 +4,7 @@ import { IoMdArrowBack } from "react-icons/io";
 
 const DetailsCoffee = () => {
     const coffeeDetails = useLoaderData();
-    console.log(coffeeDetails);
+    // console.log(coffeeDetails);
     const { name, chef, supplier, price, category, details, photo } = coffeeDetails;
     return (
         <div>

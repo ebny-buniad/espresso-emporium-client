@@ -9,7 +9,7 @@ const Products = ({ coffeesPromise }) => {
 
     const [coffees, setCoffees] = useState(initialCoffees);
 
-    console.log(initialCoffees)
+    // console.log(initialCoffees)
 
     return (
         <div className='products-container h-auto pb-10'>
