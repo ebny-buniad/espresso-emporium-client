@@ -3,17 +3,14 @@ import Header from '../components/Header/Header';
 import { Outlet } from 'react-router';
 import Footer from '../components/Footer/Footer';
 
-const Root = () => {
+const AuthLayout = () => {
     return (
         <div>
             <Header></Header>
-            {/* className='min-h-[calc(100vh-446.63px)]' */}
-            <div>
-                <Outlet></Outlet>
-            </div>
+            <Outlet></Outlet>
             <Footer></Footer>
         </div>
     );
 };
 
-export default Root;
+export default AuthLayout;

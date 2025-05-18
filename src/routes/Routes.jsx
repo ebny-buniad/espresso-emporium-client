@@ -6,6 +6,9 @@ import DetailsCoffee from "../components/DetailsCoffee/DetailsCoffee";
 import UpdateDetails from "../components/UpdateDetails/UpdateDetails";
 import { Component } from "react";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
+import Signin from "../pages/Signin";
+import AuthLayout from "../Auth/AuthLayout";
+import Signup from "../pages/Signup";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +38,14 @@ const router = createBrowserRouter([
                 path: '*',
                 Component: ErrorPage
             }
+        ],
+    },
+    {
+        path: '/auth',
+        Component: AuthLayout,
+        children: [
+            { path: '/auth/sign-in', Component: Signin },
+            { path: '/auth/sign-up', Component: Signup }
         ]
     }
 ])
