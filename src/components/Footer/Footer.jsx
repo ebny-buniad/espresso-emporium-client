@@ -3,6 +3,7 @@ import logo from '../../assets/images/more/logo1.png'
 import { FaFacebookF } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
+import { Link } from 'react-router';
 
 const Footer = () => {
     return (
@@ -18,6 +19,9 @@ const Footer = () => {
                         <FaLinkedinIn />
                         <BsTwitterX />
                     </div>
+                    <p>
+                        <Link to='/dashboard'>Dashboard</Link>
+                    </p>
                 </div>
                 <div className='space-y-3'>
                     <h3 className='text-3xl font-rancho pb-5'>Contact with Us</h3>

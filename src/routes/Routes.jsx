@@ -9,6 +9,7 @@ import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Signin from "../pages/Signin";
 import AuthLayout from "../Auth/AuthLayout";
 import Signup from "../pages/Signup";
+import Dashboard from "../components/Dashboard/Dashboard";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
                 path: '/update-details/:id',
                 Component: UpdateDetails,
                 loader: ({ params }) => fetch(`http://localhost:3000/coffees/${params.id}`)
+            },
+            {
+                path: 'dashboard',
+                Component: Dashboard,
+                loader: ()=> fetch('http://localhost:3000/users')
             },
             {
                 path: '*',

@@ -12,11 +12,17 @@ const Signup = () => {
         const formData = new FormData(form);
 
         const { email, password, ...userProfile } = Object.fromEntries(formData.entries())
-        const userInfo = { email, ...userProfile }
+
 
         createUser(email, password)
-            .then(() => {
-                // console.log(result.user.metadata.creationTime)
+            .then((result) => {
+                console.log(result)
+                const userInfo = {
+                    email,
+                    ...userProfile,
+                    creationTime: result.user?.metadata?.creationTime,
+                    lastSignInTime: result.user?.metadata?.lastSignInTime,
+                }
 
                 fetch('http://localhost:3000/users', {
                     method: 'POST',
